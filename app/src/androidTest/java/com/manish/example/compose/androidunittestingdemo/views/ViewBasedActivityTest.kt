@@ -18,6 +18,7 @@ import org.junit.Test
 
 class ViewBasedActivityTest {
 
+    // this line ensures that this file is for ViewBasedActivity class and will open / launch that activity.
     @get:Rule
     val activityScenarioRule = ActivityScenarioRule(ViewBasedActivity::class.java)
 
@@ -32,7 +33,7 @@ class ViewBasedActivityTest {
     @Test
     fun buttonClickActionTest() {
         onView(withId(R.id.testBtn)).perform(click())
-//        onView(withId(R.id.testBtn)).perform(typeText("this is for edittext input"))
+//        onView(withId(R.id.testBtn)).perform(typeText("this is for edittext input")) // typeText is for input field EditText
         onView(withId(R.id.tvId)).check(matches(withText("Button is clicked")))
     }
 }
