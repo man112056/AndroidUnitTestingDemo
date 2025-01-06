@@ -27,4 +27,12 @@ class DemoUtils {
         // Compare the sanitized string with its reversed version
         return sanitizedStr == reversedStr
     }
+
+    fun isPasswordValid(inputStr: String): Boolean {
+        if (inputStr.isNotEmpty() && inputStr.length in (6..15)) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

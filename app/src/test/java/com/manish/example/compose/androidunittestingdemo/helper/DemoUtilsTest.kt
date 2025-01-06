@@ -1,5 +1,6 @@
 package com.manish.example.compose.androidunittestingdemo.helper
 
+import android.provider.SyncStateContract.Helpers
 import android.util.Log
 import junit.framework.TestCase.assertEquals
 import org.junit.After
@@ -18,18 +19,25 @@ class DemoUtilsTest {
 
     @Before
     fun setUp() {
-        Log.d("Manish", "setUp: ")
+//        Log.d("Manish", "setUp: ")
     }
 
     @After
     fun tearDown() {
-        Log.d("Manish", "tearDown: ")
+//        Log.d("Manish", "tearDown: ")
     }
 
     @Test
     fun isPalindrome() {
         val helper = DemoUtils()
         val result = helper.isPalindrome("")
+        assertEquals(true, result)
+    }
+
+    @Test
+    fun isPasswordValid() {
+        val helper = DemoUtils()
+        val result = helper.isPasswordValid("Manish")
         assertEquals(true, result)
     }
 }

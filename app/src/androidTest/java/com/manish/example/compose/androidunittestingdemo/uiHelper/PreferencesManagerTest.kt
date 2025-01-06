@@ -22,7 +22,7 @@ class PreferencesManagerTest {
 
     @After
     fun tearDown() {
-        Log.d("Manish", "tearDown: get")
+//        Log.d("Manish", "tearDown: get")
     }
 
     @Test
